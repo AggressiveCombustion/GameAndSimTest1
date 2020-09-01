@@ -22,4 +22,21 @@ public class CollisionTest : MonoBehaviour
 
         Debug.Log(collision.gameObject.name);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Hit Trigger");
+
+        Debug.Log(other.gameObject.name);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Out of trigger");
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Staying in trigger");
+    }
 }
